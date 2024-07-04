@@ -1,0 +1,4 @@
+FROM docker.elastic.co/logstash/logstash:8.14.2
+RUN rm -f /usr/share/logstash/pipeline/logstash.conf
+COPY ../../sqljdbc_12.6.3.0_enu/jars/mssql-jdbc-12.6.3.jre8.jar /usr/share/logstash/logstash-core/lib/jars/mssql-jdbc-12.6.3.jre8.jar
+COPY ../../sqljdbc_12.6.3.0_enu/jars/mssql-jdbc-12.6.3.jre11.jar /usr/share/logstash/logstash-core/lib/jars/mssql-jdbc-12.6.3.jre11.jar
