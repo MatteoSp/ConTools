@@ -1,7 +1,7 @@
 #Mongo-Tools
 $baseTag = "matteosp/mongo-tools"
 $relTag = "100.9.4"
-docker build . -f ".\DockerFiles\Mongo\DatabaseTools\v100.9.4-amd-64" -t $baseTag -t "$baseTag`:latest" -t "$baseTag`:$relTag"
+docker build . -f ".\DockerFiles\Mongo\DatabaseTools\$relTag" -t $baseTag -t "$baseTag`:latest" -t "$baseTag`:$relTag"
 docker push $baseTag
 docker push "$baseTag`:latest"
 docker push "$baseTag`:$relTag"
@@ -9,7 +9,7 @@ docker push "$baseTag`:$relTag"
 #PgClient
 $baseTag = "matteosp/pg-client"
 $relTag = "16"
-docker build . -f ".\DockerFiles\Postgres\Client\v16-amd-64" -t $baseTag -t "$baseTag`:latest" -t "$baseTag`:$relTag"
+docker build . -f ".\DockerFiles\Postgres\Client\$relTag" -t $baseTag -t "$baseTag`:latest" -t "$baseTag`:$relTag"
 docker push $baseTag
 docker push "$baseTag`:latest"
 docker push "$baseTag`:$relTag"
@@ -20,7 +20,7 @@ Expand-Archive ".\sqljdbc_12.6.3.0_enu.zip"
 
 $baseTag = "matteosp/logstash"
 $relTag = "20240704"
-docker build . -f ".\DockerFiles\logstash\20240704" -t $baseTag -t "$baseTag`:latest" -t "$baseTag`:$relTag"
+docker build . -f ".\DockerFiles\logstash\$relTag" -t $baseTag -t "$baseTag`:latest" -t "$baseTag`:$relTag"
 docker push $baseTag
 docker push "$baseTag`:latest"
 docker push "$baseTag`:$relTag"
